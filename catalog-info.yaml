@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "copilot-app-1"
+
+  links:
+    - url: https://github.com/RohanAwasthi/aws-ebs-20240212121943
+      title: "copilot-app-1"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "aws-ebs-20240212121943"
+    environmentname: copilot-env
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-copilot-app-1'
+    github.com/project-slug: RohanAwasthi/aws-ebs-20240212121943
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "group:default/ey"
